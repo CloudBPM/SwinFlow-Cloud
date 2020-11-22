@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fa_user">&#xf007;</string>
+    <string name="fa_lock">&#xf023;</string>
+    <string name="fa_home">&#xf015;</string>
+    <string name="fa_clock">&#xf017;</string>
+    <string name="fa_user_circle">&#xf2bd;</string>
+    <string name="fa_file_alt">&#xf15c;</string>
+    <string name="fa_user_tie">&#xf508;</string>
+
+    <string name="fa_list_ul">&#xf0ca;</string>
+    <string name="fa_chevron_left">&#xf053;</string>
+    <!--减号-->
+    <string name="fa_minus_square_o">&#xf147;</string>
+    <string name="fa_plus_square_o">&#xf196;</string>
+</resources>

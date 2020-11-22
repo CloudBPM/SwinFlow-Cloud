@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android= "http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    <solid android:color="#f9282c" />
+    <size
+        android:width="15dp"
+        android:height="15dp" />
+    <!-- 背景填充颜色值 -->
+    <!--<solid android:color="#ff0008" />
+
+    &lt;!&ndash; radius值越大，越趋于圆形 &ndash;&gt;
+    <corners android:radius="360dip" />
+
+    &lt;!&ndash; 圆角图像内部填充四周的大小 ，将会以此挤压内部布置的view &ndash;&gt;
+    <padding
+android:bottom="3dip"
+android:left="3dip"
+android:right="3dip"
+android:top="3dip" />-->
+</shape>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" action="/api/appUpload/upload">
+        <label>
+            appName：
+            <input name="appName" value="myxuanqi.apk" type="text">
+        </label>
+        <br/>
+        <label>
+            versionName：
+            <input name="versionName" type="text">
+        </label>
+        <br/>
+        <label>
+            updateContent：
+            <input name="updateContent" type="text">
+        </label>
+        <br/>
+        <label>
+            passWord：
+            <input name="passWord" type="text">
+        </label>
+        <br/>
+        <label>
+            uploadFile：
+            <input name="file" type="file">
+        </label>
+        <br/>
+        <input type="submit" value="upload">
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!--pages/phoneLogin/phoneLogin.wxml-->
+<view class="loginPic">
+  <image src='/resources/img/login.png' class='img'></image>
+</view>
+
+<view class='inputList'>
+  <view class='inputUser'>
+    <text>+86</text>
+    <icon class='fa fa-angle-right'></icon>
+    <input type='number' bindinput ="phoneInput" maxlength="11" placeholder="请输入手机号" auto-focus></input>
+  </view>
+  <view class='inputPassword'>
+    <input type='number' maxlength="6" placeholder="请输入验证码" bindinput ="verifyCode" ></input>
+    <button class='getCode' bindtap='getCode' disabled="{{isDisabled}}">{{text}}</button>
+  </view>
+  <view class='loginBtn'>
+    <button bindtap="login">登录</button>
+  </view>
+  <view class='lostpassword'>
+    <text bindtap="userlogin">账号密码登录</text>
+  </view>
+</view>

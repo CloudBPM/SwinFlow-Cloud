@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.video.ShootingActivity">
+
+    <SurfaceView
+        android:id="@+id/sv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <Button
+        android:id="@+id/btn_switch_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="切换"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="轻触拍照，长按摄像，最长10秒"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/iv_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/cpb_progress"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="100"
+        android:progress="0"
+        app:background_color="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:progress_background_color="@android:color/transparent"
+        app:progress_end_color="@color/color_red"
+        app:progress_start_color="@color/color_red"
+        app:progress_stroke_cap="round"
+        app:progress_stroke_width="3dp"
+        app:style="solid_line" />
+
+    <ImageView
+        android:id="@+id/iv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp"
+        android:src="@mipmap/tag_camera_start"
+        app:layout_constraintBottom_toBottomOf="@+id/sv_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

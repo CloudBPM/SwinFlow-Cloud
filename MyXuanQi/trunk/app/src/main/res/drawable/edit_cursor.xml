@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--输入光标颜色设置-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+        <size android:width="1dp" />
+        <solid android:color="#00ccff" />
+
+</shape>

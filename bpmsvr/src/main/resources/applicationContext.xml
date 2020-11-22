@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/context 
+		                   http://www.springframework.org/schema/context/spring-context.xsd 
+		                   http://www.springframework.org/schema/beans 
+		                   http://www.springframework.org/schema/beans/spring-beans.xsd 
+		                   http://www.springframework.org/schema/data/mongo 
+                           http://www.springframework.org/schema/data/mongo/spring-mongo-1.10.xsd ">
+	<!-- The following text are tags for ANT. Be careful when editting this 
+		file -->
+	<!-- 1. Change_When_Release_Before -->
+	<!-- 2. Change_When_Release_After -->
+	<!-- 3. Remove_When_Release -->
+
+	<!-- <context:property-placeholder location="classpath:sysconfig.properties" 
+		/> -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:sysconfig.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- data source used for ordinary Java app -->
+	<!-- 请参考reference: https://segmentfault.com/a/1190000005829384 -->
+	<!-- reference: http://commons.apache.org/proper/commons-dbcp/configuration.html -->
+	<bean id="RepositoryDBDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${db.jdbc.driverClassName}" />
+		<property name="url" value="${db.jdbc.url}" />
+		<property name="username" value="${db.jdbc.username}" />
+		<property name="password" value="${db.jdbc.password}" />
+		<property name="maxWait" value="${db.jdbc.maxWait}" />
+		<property name="maxActive" value="${db.jdbc.maxActive}" />
+		<property name="maxIdle" value="${db.jdbc.maxIdle}" />
+		<property name="minIdle" value="${db.jdbc.minIdle}" />
+		<property name="logAbandoned" value="${db.jdbc.logAbandoned}" />
+		<property name="initialSize" value="${db.jdbc.initialSize}" />
+		<property name="removeAbandoned" value="${db.jdbc.removeAbandoned}" />
+		<property name="removeAbandonedTimeout" value="${db.jdbc.removeAbandonedTimeout}" />
+		<property name="poolPreparedStatements" value="${db.jdbc.poolPreparedStatements}" />
+		<property name="testOnBorrow" value="${db.jdbc.testOnBorrow}" />
+		<property name="validationQuery" value="${db.jdbc.validationQuery}" />
+	</bean>
+
+	<!-- 定义mongo对象，对应的是mongodb官方jar包中的Mongo，replica-set设置集群副本的ip地址和端口 -->
+	<!-- credentials="${mongo.user}:${mongo.pwd}@${mongo.defaultDbName}" -->
+	<mongo:mongo-client host="${mongo.host}" port="${mongo.port}"
+		id="mongo">
+		<mongo:client-options connections-per-host="${mongo.connectionsPerHost}"
+			min-connections-per-host="${mongo.minConnectionsPerHost}"
+			threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
+			connect-timeout="${mongo.connectTimeout}" max-wait-time="${mongo.maxWaitTime}"
+			socket-keep-alive="${mongo.socketKeepAlive}" socket-timeout="${mongo.socketTimeout}"
+			description="${mongo.description}" max-connection-idle-time="${mongo.maxConnectionIdleTime}"
+			max-connection-life-time="${mongo.maxConnectionLifeTime}"
+			heartbeat-socket-timeout="${mongo.heartbeatSocketTimeout}"
+			heartbeat-connect-timeout="${mongo.heartbeatConnectTimeout}"
+			min-heartbeat-frequency="${mongo.minHeartbeatFrequency}"
+			heartbeat-frequency="${mongo.heartbeatFrequency}" />
+	</mongo:mongo-client>
+
+	<!-- mongo的工厂，通过它来取得mongo实例,dbname为mongodb的数据库名，没有的话会自动创建 -->
+	<mongo:db-factory dbname="${mongo.defaultDbName}"
+		mongo-ref="mongo" />
+
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="mongo" />
+		<constructor-arg name="databaseName" value="${mongo.defaultDbName}" />
+	</bean>
+
+	<!-- 映射转换器，扫描back-package目录下的文件，根据注释，把它们作为mongodb的一个collection的映射 -->
+	<!--<mongo:mapping-converter base-package="com.luckypandadas.model" /> -->
+
+	<!-- mongodb bean的仓库目录，会自动扫描扩展了MongoRepository接口的接口进行注入 -->
+	<!--<mongo:repositories base-package="com.luckypandadas" /> -->
+
+</beans>

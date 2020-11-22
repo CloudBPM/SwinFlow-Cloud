@@ -1,0 +1,234 @@
+/* CSS used here will be applied after bootstrap.css */
+/*
+ * Slidebar (add to your bootstrap)
+ */
+body {
+	overflow-x: hidden;
+	background-color: #fff;
+}
+
+.slidebar-form {
+	padding: 7px 15px 13px 15px;
+}
+
+.slidebar-nav {
+	left: 250px;
+	list-style: none;
+	height: 100%;
+	margin: 0;
+	margin-left: -250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0;
+	position: fixed;
+	background-color: #f8f8f8;
+	width: 0;
+	z-index: 1000;
+}
+
+#wrapper.toggled .slidebar-nav {
+	width: 250px;
+}
+
+.slidebar-nav .navbar-collapse {
+	padding: 0;
+	max-height: none;
+}
+
+.slidebar-nav ul {
+	float: none;
+	width: 100%;
+}
+
+.slidebar-nav ul:not {
+	display: block;
+}
+
+.slidebar-nav li {
+	float: none;
+	display: block;
+}
+
+.slidebar-nav li a {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.divider {
+	border-bottom: 1px solid #ddd;
+}
+
+.slidebar-nav .open .dropdown-menu {
+	position: static;
+	float: none;
+	width: auto;
+	margin: 0;
+	padding: 5px 0;
+	background-color: transparent;
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.slidebar-nav .open .dropdown-menu>li>a {
+	padding: 5px 15px 5px 25px;
+}
+
+.slidebar-nav .navbar-brand {
+	width: 100%;
+}
+
+.slidebar-nav .open>a>b.caret {
+	border-top: none;
+	border-bottom: 4px solid;
+}
+
+.slidebar-nav .navbar-nav {
+	margin: 0;
+}
+
+#wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+#wrapper.toggled {
+	padding-left: 250px;
+}
+
+#page-wrapper6 {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+	/*top: 20px;*/
+}
+
+#wrapper.toggled #page-wrapper6 {
+	position: absolute;
+	margin-right: -250px;
+}
+
+@media ( min-width :768px) {
+	#wrapper {
+		padding-left: 250px;
+	}
+	#wrapper.toggled {
+		padding-left: 0;
+	}
+	#page-wrapper6 {
+		padding: 20px;
+		position: relative;
+	}
+	#wrapper.toggled #page-wrapper6 {
+		position: relative;
+		margin-right: 0;
+	}
+	.slidebar-nav {
+		width: 250px;;
+	}
+	#wrapper.toggled .slidebar-nav {
+		width: 0;
+	}
+}
+
+.slidebar-toggle {
+	position: relative;
+	float: left;
+	padding: 9px 10px;
+	margin-top: 8px;
+	margin-left: 15px;
+	margin-bottom: 8px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.slidebar-toggle:focus {
+	outline: 0;
+}
+
+.slidebar-toggle .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+
+.slidebar-toggle .icon-bar+.icon-bar {
+	margin-top: 4px;
+}
+
+.navbar-default .slidebar-toggle {
+	border-color: #ddd;
+}
+
+.navbar-default .slidebar-toggle:hover, .navbar-default .slidebar-toggle:focus
+	{
+	background-color: #ddd;
+}
+
+.navbar-default .slidebar-toggle .icon-bar {
+	background-color: #888;
+}
+
+/*
+ * White navbar style
+ */
+#navbar-white.navbar-default { /* #efffff - #ffffff */
+	font-size: 14px;
+	border: 0px;
+	border-radius: 0;
+}
+
+.enabled-status {
+	position:relative;
+	background-color:#fff;
+	box-sizing:border-box;
+	border-radius:4px;
+	padding:25px 19px 24px;
+	min-height:152px;
+	overflow:auto;
+}
+
+.enabled-title::after{
+	content: "未查阅";
+	font-weight: bold;
+	border:1px solid #DDD;
+	border-radius:4px 0;
+	background-color:#30d768;/*#F5F5F5;*/
+	left:-1px;
+	padding:3px 7px;
+	position:absolute;
+	/*color:#9DA0A4;*/
+	top:-1px;
+}
+
+.running-status {
+	position:relative;
+	background-color:#fff;
+	box-sizing:border-box;
+	border-radius:4px;
+	padding:25px 19px 24px;
+	min-height:152px;
+	overflow:auto;
+}
+
+.running-title::after{
+	content: "已查阅";
+	font-weight: bold;
+	border:1px solid #DDD;
+	border-radius:4px 0;
+	background-color: #ba490d;/*#F5F5F5;*/
+	left:-1px;
+	padding:3px 7px;
+	position:absolute;
+	/*color:#9DA0A4;*/
+	top:-1px;
+}
+
+
+

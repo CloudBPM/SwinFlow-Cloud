@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xq.myxuanqi.ui.activity.news.NewsDetailActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb"
+        android:background="@drawable/tab_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="@dimen/dp_30"
+        android:paddingBottom="@dimen/dp_10"
+        app:layout_constraintBottom_toTopOf="@id/web">
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@mipmap/arrow_left_ffffff"
+            android:padding="@dimen/dp_10"
+            android:gravity="center"
+            android:id="@+id/tb_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="动态详情"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_18"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        app:layout_constraintTop_toBottomOf="@id/tb" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/web"
+        app:layout_constraintTop_toBottomOf="@id/pb"
+        ></WebView>
+</android.support.constraint.ConstraintLayout>

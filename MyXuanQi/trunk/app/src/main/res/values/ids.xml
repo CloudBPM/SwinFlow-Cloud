@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- Messages IDs -->
+    <item type="id" name="auto_focus"/>
+    <item type="id" name="decode"/>
+    <item type="id" name="decode_failed"/>
+    <item type="id" name="decode_succeeded"/>
+    <item type="id" name="encode_failed"/>
+    <item type="id" name="encode_succeeded"/>
+    <item type="id" name="launch_product_query"/>
+    <item type="id" name="quit"/>
+    <item type="id" name="restart_preview"/>
+    <item type="id" name="return_scan_result"/>
+    <item type="id" name="search_book_contents_failed"/>
+    <item type="id" name="search_book_contents_succeeded"/>
+    <!--searchBar-->
+    <item name="sb_cl" type="id">SearchBarCl</item>
+    <item name="sb_rl" type="id">SearchRl</item>
+    <item name="sb_iv" type="id">searchIv</item>
+    <!--menuBar-->
+    <item name="viewPager" type="id">vp</item>
+    <item name="tb_layout" type="id">tb</item>
+    <item name="relative" type="id">relativeLayout</item>'
+    <item name="mb_cl" type="id">menuCl</item>
+    <!--button-->
+    <item name="imagView" type="id">iv</item>
+    <item name="tv_text" type="id">tv</item>
+    <!--contentBar-->
+    <item name="cb_cl" type="id">contentCl</item>
+
+
+</resources>

@@ -1,0 +1,84 @@
+/* pages/login/login.wxss */
+
+.loginPic {
+  margin: 10px 30px;
+  text-align: center;
+}
+
+.img {
+  width: 220rpx;
+  height: 220rpx;
+  
+}
+
+.inputList {
+  font-size: 14px;
+  padding: 6px 10px;
+  position: relative;
+}
+
+.inputList input {
+  display: inline-block;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.inputUser {
+  margin: 0 10px 10px;
+  height: 50px;
+  border-bottom: solid 1px #ddd;
+}
+
+.inputUser icon {
+  font-size: 18px;
+  padding: 0 10px 0 15px;
+  position: absolute;
+  top: 14px;
+}
+
+.inputPassword {
+  margin: 0 10px 18px;
+  height: 50px;
+  border-bottom: solid 1px #ddd;
+}
+
+.inputPassword icon {
+  font-size: 18px;
+  padding: 0 10px 0 15px;
+  position: absolute;
+  top: 75px;
+}
+
+.inputPassword #eye {
+  right: 20px;
+}
+
+.loginBtn {
+  margin: 30px 10px 0;
+}
+
+.loginBtn button {
+  font-size: 36rpx;
+  background: #33636d;
+  color: #fff;
+  height: 90rpx;
+  border-radius: 25px;
+}
+
+.lostpassword {
+  text-align: right;
+  padding: 0 15px 0 0;
+  position: relative;
+}
+
+.changelogin {
+  text-align: right;
+  padding: 15px 15px 0 0;
+  position: relative;
+}
+
+.phone{
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}

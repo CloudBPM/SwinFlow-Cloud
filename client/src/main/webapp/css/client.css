@@ -1,0 +1,63 @@
+/* CUSTOMIZE
+-------------------------------------------------- */
+
+/* FOOTER CSS
+-------------------------------------------------- */
+
+
+.footer_bg {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #253237;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.footer-body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ade5f9;
+  line-height: 1.8;
+  font-family: Calibri;
+}
+
+.footer-link-list {
+  margin: 0;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer-link {
+  font-size: 14px;
+  font-weight: normal;
+  color: #ccc;
+  font-family: Calibri;
+  margin-bottom: 5px
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: none
+}
+
+.pagination-right {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.pagination-left {
+  text-align: left;
+  margin-top: 40px;
+}
+
+
+
+

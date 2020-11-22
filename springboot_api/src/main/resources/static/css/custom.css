@@ -1,0 +1,89 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+body {
+	background-color: #eee;
+}
+
+/* CUSTOMIZE
+-------------------------------------------------- */
+
+/* FOOTER CSS
+-------------------------------------------------- */
+
+.footer_bg {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #eee;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.footer-body {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  line-height: 1.8;
+  font-family: Calibri;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer-link-list {
+  margin: 0;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer-link {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+  font-family: Calibri;
+  margin-bottom: 5px
+}
+
+.footer-link:hover {
+  color: #000;
+  text-decoration: none
+}
+
+.pagination-right {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.pagination-left {
+  text-align: left;
+  margin-top: 40px;
+}
+
+/** Get Started Free Trial CSS
+---------------------------------*/
+.start-trial-bg {
+  width: 100%;
+  height: 140px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: #E1FEDA;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.start-trial-btn {
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+
+

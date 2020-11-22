@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_p"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@mipmap/org_bc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gv">
+
+        <TextView
+            android:id="@+id/tv_org_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_28"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_org_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textColor="#fff"
+            android:paddingLeft="@dimen/dp_10"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <!--<ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cl"
+        android:layout_marginTop="@dimen/dp_10"></ScrollView>-->
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:id="@+id/gv"
+        app:layout_constraintTop_toBottomOf="@id/cl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/dp_5"
+        android:verticalSpacing="@dimen/dp_10"
+        android:horizontalSpacing="@dimen/dp_5"
+        android:numColumns="4"
+        android:columnWidth="@dimen/dp_60"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"></GridView>
+</android.support.constraint.ConstraintLayout>

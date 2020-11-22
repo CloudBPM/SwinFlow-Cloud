@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="communication" />
+    <version value="8" />
+
+    <list>
+        <mapping class="com.xq.myxuanqi.model.contact.ContactPerson" />
+        <mapping class="com.xq.myxuanqi.model.contact.ContactMessage" />
+        <mapping class="com.xq.myxuanqi.model.systemNotice.SystemNotice" />
+    </list>
+</litepal>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1485ee</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#40b9ff</color>
+    <color name="trans">#00ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_color">#64cbff</color>
+    <!--checkbox选中与未选中的颜色-->
+    <color name="normalCheckBox">#acacac</color>
+    <color name="selectCheckBox">#68cbef</color>
+
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+    <!--列表项分割线的颜色-->
+    <color name="dividing_line_color">#D0D0D0</color>
+
+    <color name="white_color">#ffffff</color>
+
+    <color name="btn_rect_alpha">#56b3b3b3</color>
+
+    <color name="color_red">#c60347</color>
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f3f3">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tb"
+            android:background="#fff"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingTop="@dimen/dp_30"
+            android:paddingBottom="@dimen/dp_10">
+            <ImageView
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:background="@mipmap/arrow_left_000000"
+                android:padding="@dimen/dp_10"
+                android:gravity="center"
+                android:id="@+id/tb_back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:text="关于"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center"/>
+        </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@id/tb"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:background="@mipmap/icon"
+            app:layout_constraintLeft_toLeftOf="@id/relativeLayout"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout"
+            app:layout_constraintTop_toTopOf="@id/relativeLayout"
+            app:layout_constraintBottom_toBottomOf="@id/relativeLayout"/>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon"
+            app:layout_constraintLeft_toLeftOf="@id/relativeLayout"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout"
+            app:layout_constraintBottom_toBottomOf="@id/relativeLayout"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="版本号" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:id="@+id/relativeLayout2"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="开发商"
+            android:id="@+id/textView43" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout2"
+            android:text="杭州轩琦信息科技有限公司"
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout2"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:id="@id/relativeLayout3"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="版本更新"
+            android:id="@+id/textView44" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout3"
+            android:text=""
+            android:id="@+id/tv_update"
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

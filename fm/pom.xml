@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.xuanqi.cloud.ibpm</groupId>
+	<artifactId>fm</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<build>
+		<finalName>${project.name}</finalName>
+		<plugins>
+			<!--<plugin>-->
+				<!--<groupId>net.alchim31.maven</groupId>-->
+				<!--<artifactId>yuicompressor-maven-plugin</artifactId>-->
+				<!--<version>1.5.1</version>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<phase>prepare-package</phase>-->
+						<!--<goals>-->
+							<!--<goal>compress</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+				<!--<configuration>-->
+					<!--<skip>false</skip>-->
+					<!--&lt;!&ndash; 读取js,css文件采用UTF-8编码 &ndash;&gt;-->
+					<!--<encoding>UTF-8</encoding>-->
+					<!--&lt;!&ndash; 忽略 js 错误警告 &ndash;&gt;-->
+					<!--<jswarn>false</jswarn>-->
+					<!--&lt;!&ndash; 若存在已压缩的文件，会先对比源文件是否有改动。有改动便压缩，无改动就不压缩 &ndash;&gt;-->
+					<!--<force>true</force>-->
+					<!--<nosuffix>true</nosuffix>-->
+					<!--&lt;!&ndash; 在指定的列号后插入新行 &ndash;&gt;-->
+					<!--<linebreakpos>-1</linebreakpos>-->
+					<!--&lt;!&ndash;<suffix>.min</suffix>&ndash;&gt;-->
+					<!--<statistics>true</statistics>-->
+					<!--&lt;!&ndash; 压缩之前先执行聚合文件操作 &ndash;&gt;-->
+					<!--<preProcessAggregates>true</preProcessAggregates>-->
+					<!--<nomunge>false</nomunge>-->
+					<!--<includes>-->
+						<!--<include>**/*.js</include>-->
+						<!--<include>**/*.css</include>-->
+					<!--</includes>-->
+					<!--&lt;!&ndash; 输出主目录 where to put the generate files &ndash;&gt;-->
+					<!--<outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>-->
+					<!--&lt;!&ndash; 待处理文件目录 directory where source files will be pulled from &ndash;&gt;-->
+					<!--<sourceDirectory>${basedir}/src/main/webapp/</sourceDirectory>-->
+					<!--<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<!--<warSourceExcludes>**/*.js,**/*.css</warSourceExcludes>-->
+					<outputDirectory>D:\server_republish\</outputDirectory>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.xuanqi.paas.core</groupId>
+			<artifactId>xq-paas-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.xuanqi.paas.core.user</groupId>
+			<artifactId>xq-paas-core-user</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>catalina</artifactId>
+			<version>6.0.53</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.xuanqi.paas.core.session</groupId>
+			<artifactId>xq-paas-core-session</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<name>fm</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+</project>

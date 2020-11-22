@@ -1,0 +1,30 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../api/plugins/bootstrap-3.3.5/css/bootstrap.min.css">
+<script src="../api/plugins/jquery-2.1.1.min.js"></script>
+<script src="../api/plugins/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../api/js/common/basic.js"></script>
+
+<script src="js/pane/firstpagepanel.js"></script>
+<script src="js/pane/orginformationpanel.js"></script>
+<script src="js/pane/orgproductspanel.js"></script>
+<script src="js/pane/orgnewpanel.js"></script>
+
+<script src="js/loadpage.js"></script>
+<script src="js/orgs/homepagetemplate.js"></script>
+<script src="js/omservices.js"></script>
+<!--
+
+//-->
+
+<body id = "main">
+</body>
+
+<script>
+	var omservices = new OMService("<%=userid%>", "<%=token%>", "<%=sessiondata%>");
+	
+	var managerbody = document.getElementById("main");
+	$(managerbody).omHomePage({
+		id : "1",
+		title:"1",
+	});
+</script>

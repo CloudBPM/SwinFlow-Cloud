@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!--
+		Appender
+	-->
+	<!-- 设置通道ID和输出方式：org.apache.log4j.RollingFileAppender -->
+	<!-- Log output to stdout -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+	    <param name="Target" value="System.out"/>
+	    <layout class="org.apache.log4j.PatternLayout">
+	         <param name="ConversionPattern" value="[%5p] %d{yyyy/MM/dd HH:mm:ss.SSS} - %c.%M - %m%n" />
+	    </layout>
+	</appender>
+	
+	<appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+	    <param name="File" value="D:/Data/demoApplication.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="1000KB"/>
+        <param name="MaxBackupIndex" value="10"/>
+	    <layout class="org.apache.log4j.PatternLayout">
+	         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+	    </layout>
+	</appender>
+	
+<!--   
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] %d{yyyy/MM/dd HH:mm:ss.SSS} - %c.%M - %m%n" />
+		</layout>
+		log4j.logger.org.mongodb.driver=OFF
+		
+Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
+mongoLogger.setLevel(Level.SEVERE);
+		
+	</appender>
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">  
+        <param name="file" value="C:/AM-JavaApp-Lib/log2.txt"/>  
+        <param name="Threshold" value="ALL"/>  
+        <param name="MaxFileSize" value="300KB"/>  
+        <param name="MaxBackupIndex" value="20"/>  
+        <layout class="org.apache.log4j.PatternLayout">  
+           <param name="ConversionPattern" value="[%d{HH:mm:ss,SSS}][%p,%c{1}] %m%n"/>  
+        </layout>  
+    </appender>  
+ -->
+	<!--
+		Logger
+	-->
+	
+	<logger name="org.mongodb.driver.cluster" level="OFF" />
+	<logger name="cloudbpm" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="fileAppender" />
+	</logger>
+	
+    <root>
+        <priority value="error"/>
+        <appender-ref ref="fileAppender"/>
+    </root>
+</log4j:configuration>

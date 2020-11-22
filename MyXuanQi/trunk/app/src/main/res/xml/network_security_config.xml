@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--从android p开始，网络请求只支持https，添加测此文件用来支持http-->
+<!--参考：https://blog.csdn.net/yonbor605/article/details/82223882-->
+<!--https://blog.csdn.net/chinaboyliusir/article/details/82760127-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

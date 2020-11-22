@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f3f3">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="@dimen/dp_30"
+        android:id="@+id/cl">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:id="@+id/tb"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <com.shamanland.fonticon.FontIconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fa_chevron_left"
+                android:textColor="#fff"
+                android:padding="@dimen/dp_10"
+                android:gravity="center"
+                android:id="@+id/tb_back"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_40"
+                android:text="手机信息"
+                android:textColor="#fff"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cl"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="手机型号"
+            android:id="@+id/textView43" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout"
+            android:id="@+id/tv_xinghao"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="SDK版本"
+            android:id="@+id/textView44" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout1"
+            android:id="@+id/tv_sdk"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout1"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="系统版本"
+            android:id="@+id/textView45" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout2"
+            android:id="@+id/tv_xitong"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout2"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="手机品牌"
+            android:id="@+id/textView46" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout3"
+            android:id="@+id/tv_pinpai"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout3"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="设备版本号"
+            android:id="@+id/textView47" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout4"
+            android:id="@+id/tv_shebei"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout4"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#000"
+            android:text="分辨率"
+            android:id="@+id/textView48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/relativeLayout5"
+            android:id="@+id/tv_fenbian"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

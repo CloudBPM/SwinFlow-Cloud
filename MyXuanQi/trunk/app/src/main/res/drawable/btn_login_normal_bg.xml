@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--登录按钮背景颜色设置-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<solid android:color="#5eb8e9" />-->
+    <corners android:radius="24dp"/>
+    <gradient android:startColor="#a36ecac1"
+        android:centerColor="#b94ebeda"
+        android:endColor="#b667b2d6"/>
+</shape>

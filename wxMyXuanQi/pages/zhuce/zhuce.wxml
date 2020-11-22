@@ -1,0 +1,36 @@
+<!--pages/zhuce/zhuce.wxml-->
+
+<view class="loginPic">
+  <image src='/resources/img/login.png' class='img'></image>
+</view>
+
+<view class='inputList'>
+  <view>
+    <text>昵称</text>
+    <input placeholder="请输入昵称"></input>
+  </view>
+  <view>
+    <text>手机号</text>
+    <input type='number' bindinput="phoneInput" maxlength="11" placeholder="请输入手机号" auto-focus></input>
+  </view>
+  <view>
+    <text>验证码</text>
+    <input placeholder="输入验证码" class='inputcode'></input>
+    <text class='getcode'>获取验证码</text>
+  </view>
+  <view>
+    <text>登录密码</text>
+    <input placeholder="请输入密码"></input>
+  </view>
+  <view>
+    <text>所在单位</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{kindLists}}" class='picker_view'>
+      <view class="picker">
+        {{kindLists[index]}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='zhuceBtn'>
+  <button bindtap="zhuce">注册</button>
+</view>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272828"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_20"
+        android:background="@drawable/tab_background"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:foreground="@drawable/btn_back_selector">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/arrow_left_ffffff" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dp_20"
+            android:layout_toRightOf="@+id/btn_back"
+            android:layout_alignTop="@id/btn_back"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_alignTop="@id/btn_back"
+            android:layout_alignBottom="@id/btn_back"
+            android:layout_toRightOf="@+id/btn_back"
+            android:text="图片"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <FrameLayout
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@id/btn_back"
+            android:layout_alignBottom="@id/btn_back">
+<!--android:foreground="@drawable/btn_foreground_selector"-->
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="确定"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <com.xq.myxuanqi.ui.view.imgeSelector.CropView
+        android:id="@+id/process_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

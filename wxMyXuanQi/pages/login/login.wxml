@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class="loginPic">
+  <image src='/resources/img/login.png' class='img'></image>
+</view>
+
+<view class='inputList'>
+  <view class='inputUser'>
+    <icon class='fa fa-user'></icon>
+    <input type='text' bindinput ="userNameInput" maxlength="11" placeholder="请输入用户名" auto-focus></input>
+  </view>
+  <view class='inputPassword'>
+    <icon class='fa fa-lock'></icon>
+    <input type='password' maxlength="20" bindinput ="passWdInput" placeholder="请输入登录密码"></input>
+    <!-- <icon id='eye' class='fa fa-eye-slash'></icon> -->
+  </view>
+  <view class='loginBtn'>
+    <button bindtap="login">登录</button>
+  </view>
+  <view class='loginBtn'>
+    <button bindtap="zhuce">注册</button>
+  </view>
+  <view class='changelogin'>
+    <text bindtap="phoneLogin" class='phone'>手机号登录</text>
+    <text bindtap="lost">忘记密码</text>
+  </view>
+</view>
